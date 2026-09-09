@@ -7,26 +7,48 @@
     <meta name="description" content="este es un ejemplo de una pagina web basica">
     <meta name="author" content="hh">
     <title>Fundamentos HTML</title>
+
+    <style>
+        p {
+            color:green;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
     <header>
-        <nav>
-
+        <nav id="menu-principal">
+            <div>
+                <a href="#">
+                    <img src="assets/imagenes/SENA.svg" alt="logo SENAA" width="50">
+                </a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre mi</a></li>
+                    <li><a href="#">Habilidades</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main
+    <hr color="blue" size="5" width="100%">
+
+    <main>
 
         <!-- contenido principal de la pagina-->
         <section>
             <div>
-                <h1>Fundamentos HTML</h1>
-                <h2>Diana Valentina Castillo Preciado</h2>
-                <h3>Aprendiz - Ficha 3233140</h3>
+                <h1 style="color: red;">Fundamentos HTML</h1>
+                <h2 style="color: blue;">Diana Valentina Castillo Preciado</h2>
+                <h3 class="texto_destacado">Aprendiz - Ficha 3233140</h3>
             </div>
 
             <div>
-                <h3>Sobre mi</h3>
+                <h3 class="texto_destacado">Sobre mi</h3>
                 <p>Soy estudiante de la <i>Tecnología en Análisis y Desarrollo de Software</i> del <a href="https://www.sena.edu.co" target="_blank">SENA</a>. con conocimientos en programación, desarrollo de aplicaciones, 
                 bases de datos y control de versiones y tambien tengo un <u>Tecnico en Recursos Ambientales</u> con el sena Regional de Casanare (Yopal).<br>
                 <strong>Me caracterizo por ser una persona responsable,</strong> organizada, comprometida y con gran disposición para aprender nuevas <blockquote>tecnologías y afrontar nuevos retos.</blockquote></p>
@@ -51,6 +73,8 @@
 
             <div>
                 <h3>Habilidades Blandas</h3>
+
+                
                 <ol>
                     <li>Trabajo en Equipo</li>
                     <li>Comunicacion</li>
@@ -59,8 +83,130 @@
                 </ol>
             </div>
         </section>
+
+        <hr>
+
+        <!-- Contenidos Multimedia-->
+        <section>
+            <h3>Contenido Multimedia</h3>
+            <div>
+                <center>
+                <h3>imagen</h3>
+                <img src="assets/imagenes/basketball.jpg.jpg" alt="imagen de basketball" width="300">
+                </a>
+            </center>
+            </div>
+            <div>
+                <center>
+                <h4>videos</h4>
+                    <video width="320" height="240" controls>
+                        <source src="assets/video/basketball.mp4" type="video/mp4">
+                    </video>
+                </center>
+            </div>
+
+            <div>
+                <center>
+                <h5>audio</h5>
+                <audio controls>
+                    <source src="assets/audio/basketball.mp3" type="audio/mp3">
+                    <source src="assets/audio/basketball.mp3" type="audio/mp3">
+                </audio>
+            </div>
+
+            <div>
+                <center>
+                    <h4>ifames - map</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.8788855551516!2d-72.8971748230735!3d5.73057929425156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a48a8ae9bc4e7%3A0x4577dc8f78e0764b!2sCentro%20Nacional%20Minero%20SENA!5e0!3m2!1ses-419!2sco!4v1788400429832!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>"></iframe>
+                </center>
+            </div>
+        </section>
+
+    <hr>
+
+    <!--tablas-->
+    <section>
+        <div>
+        <h3>tabla de horario de clases</h3>
+        <table border="1">
+            <tr> <!--1ra fila-->
+                <th>Dia</th> <!--1ra Columna-->
+                <th>Competencia</th> <!--2daa Columna-->
+            </tr>
+
+            <tr> <!--1da fila-->
+                <td>Lunes</td> <!--1ra Columna-->
+                <td>Etica</td> <!--2da Columna-->
+            </tr>
+            <tr> <!--2da fila-->
+                <td>Martes</td> <!--1ra Columna-->
+                <td>Ingles</td> <!--2da Columna-->
+            </tr>
+            <tr> <!--3da fila-->
+                <td>Miercoles</td> <!--1ra Columna-->
+                <td>Programacion</td> <!--2da Columna-->
+            </tr> 
+
+            <tr> <!--4da fila-->
+                <td>Jueves</td> <!--1ra Columna-->
+                <td>Programacion<</td> <!--2da Columna-->
+            </tr>
+
+            <tr> <!--5da fila-->
+                <td>Viernas</td> <!--1ra Columna-->
+                <td>Programacion</td> <!--2da Columna-->
+            </tr>
+        </table>
+        </div>
+    </section>
+
+    <hr color="blue" size="5" width="100%">
+
+    <!--Formulario de contacto-->
+    <section>
+        <h3 class="texto_destacado">Formulario de Contacto</h3>
+
+        <form action="#" method="post">
+            <br>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre">
+            <br>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje"></textarea>
+            <br>
+            <label for="correo">correo</label>
+            <textarea id="gmail"></textarea>
+            <br>
+            <label for="telefono">telefono</label>
+            <textarea id="tel"></textarea>
+            <br>
+            <label for="fecha de nacimiento">fecha de nacimiento</label>
+            <textarea id=""></textarea>
+            <br>
+            <label for="contrasena">contrasena</label>
+            <textarea id="p"></textarea>
+            <br>
+            <label for="archyivo">archivo</label>
+            <textarea id="file"></textarea>
+            <br>
+            <label for="correo">correo</label>
+            <textarea id="gmail"></textarea>
+
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </section>
     </main>
+    
     <footer>
+        <div>
+        <p>Contacto: patriciamalaver49@gmail.com</p>
+        <p>Telefono: 3222347158 </p>
+        <p>Direccion: Calle 3 Sur #13- 39</p>
+        <p>Horario: Lunes a Domingo, 7:00 AM - 9:00 PM</p>
+        <p>2026 Diana Valentina Castillo Preciado. Todos los d erechechos reservados</p>
+        <p style="color:red">HOLA MUNDO</p>
+        </div>
     </footer>
 </body
 </html>

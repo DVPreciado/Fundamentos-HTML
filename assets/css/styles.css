@@ -1,0 +1,78 @@
+/* selector de font-size*/
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+color: #333333;
+line-height: 1.5;
+}
+
+/* selector de Etiqueta */
+
+h3 {
+    color:yellow;
+}
+
+/* slector de Clase */
+
+.texto_destacado {
+    color:violet;
+}
+
+/* slector de ID */
+
+#menu-principal {
+    background-color: lightblue;
+}
+/* slector de decendencia */
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* slector de ceudo clase */
+
+nav ul li a:hover {
+    color: red;
+}
+
+/* box model */
+
+div {
+    padding: 20px;
+    border: 2px solid #39A900;
+    margin: 15px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;  
+    background-color: lightgreen; 
+    background-image: url("../imagenes/paisaje.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+p{
+    font-size: 26px;
+    color:black;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+nav {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+padding: 10px 30px;
+}
+nav ul {
+display: flex;
+list-style: none;
+gap: 25px;
+} 
