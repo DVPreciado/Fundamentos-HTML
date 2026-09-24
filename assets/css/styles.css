@@ -1,46 +1,93 @@
-/* selector de font-size*/
+/* /* selector de font-size*/
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body {
-margin: 0;
-font-family: Arial, Helvetica, sans-serif;
-color: #333333;
-line-height: 1.5;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;  /* Mantiene tu fuente original */
+    color: #333333;
+    line-height: 1.5;
+    background-color: lightgreen;                 /* Mantiene tu fondo original */
+    background-image: url("../imagenes/paisaje.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-/* selector de Etiqueta */
+h1, h2, h3 {
+    text-align: center; /* Mantiene tu centrado de títulos */
+}
 
+/* El Código 1 usa h1 y h3 específicos, los combinamos aquí */
+.seccion h1 {
+    color: #00304D;
+    margin-bottom: 5px;
+}
+
+/* sector de etiquetas */
 h3 {
-    color:yellow;
+    color: yellow;
 }
 
-/* slector de Clase */
-
-.texto_destacado {
-    color:violet;
+/* Estilo de h3 dentro de las secciones de la guía */
+.seccion h3 {
+    color: #39A900;
+    font-weight: normal;
 }
 
-/* slector de ID */
-
-#menu-principal {
-    background-color: lightblue;
-}
-/* slector de decendencia */
-
-nav ul li a {
-    text-decoration: none;
+p {
+    font-size: 26px; /* Mantiene tu tamaño del texto grande */
     color: black;
 }
 
-/* slector de ceudo clase */
+/* Flexbox */
+#menu-principal {
+    background-color: lightblue; /* Mantiene tu color de fondo ID original */
+}
 
-nav ul li a:hover {
-    color: red;
+.menu-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00304D;
+    padding: 10px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+/* Selectores de  efectos hover */
+nav ul li a, .menu-principal a {
+    text-decoration: none;
+    color: black; /* Tu color original */
+    font-weight: bold;
+}
+
+.menu-principal a {
+    color: #FFFFFF; /* Color blanco para el menú de la guía */
+}
+
+nav ul li a:hover, .menu-principal a:hover {
+    color: red; /* Mantiene tu efecto rojo al pasar el mouse */
+}
+
+.linea-verde {
+    border: none;
+    height: 4px;
+    background-color: #39A900;
 }
 
 /* box model */
-
 div {
     padding: 20px;
     border: 2px solid #39A900;
@@ -48,31 +95,117 @@ div {
     box-sizing: border-box;
 }
 
-body {
-    font-family:'Times New Roman', Times, serif;  
-    background-color: lightgreen; 
-    background-image: url("../imagenes/paisaje.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+.seccion {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente añadido para que puedas leer tus letras sobre el paisaje */
+    border-radius: 8px;
 }
 
-p{
-    font-size: 26px;
-    color:black;
+.texto_destacado {
+    color: violet; /* Mantiene tu clase violeta original */
 }
 
-h1, h2, h3 {
+.habilidades {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #F7F7F7;
+    padding: 30px;
+}
+
+.habilidades ul, .habilidades ol {
+    padding-left: 20px;
+}
+
+.habilidades li {
+    margin-bottom: 8px;
+}
+
+/* multimedia */
+.multimedia-item {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.multimedia-item img,
+.multimedia-item video,
+.multimedia-item iframe {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* table */
+.tabla-horario {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.tabla-horario th, .tabla-horario td {
+    border: 1px solid #CCCCCC;
+    padding: 10px;
     text-align: center;
 }
 
-nav {
-display: flex;
-justify-content: flex-start;
-align-items: center;
-padding: 10px 30px;
+.tabla-horario th {
+    background-color: #00304D;
+    color: #FFFFFF;
 }
-nav ul {
-display: flex;
-list-style: none;
-gap: 25px;
-} 
+
+.tabla-horario tr:nth-child(even) {
+    background-color: #F0F0F0;
+}
+
+/*form, input, textarea, button */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    gap: 12px;
+}
+
+.formulario-contacto label {
+    font-weight: bold;
+    color: #00304D;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    padding: 8px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+}
+
+.formulario-contacto button {
+    background-color: #39A900;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    background-color: #2C8000;
+}
+
+/* pie de pagina */
+.pie-pagina {
+    background-color: #00304D;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.pie-pagina p {
+    margin: 4px 0;
+    font-size: 16px; /* Ajustado para que armonice con tus párrafos */
+    color: #FFFFFF;
+}
+
